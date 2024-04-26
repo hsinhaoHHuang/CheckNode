@@ -3,7 +3,7 @@ name: Documentation
 on:
   push:
     branches:
-      - branch_for_wiki
+      - test_for_wiki
     paths:
       - "wiki_docs/**"
   repository_dispatch:
@@ -39,7 +39,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           token: ${{ secrets.TOKEN_FOR_WIKI }} # allows us to push back to repo
-          ref: branch_for_wiki
+          ref: test_for_wiki
       - name: Sync Wiki to Docs
         uses: newrelic/wiki-sync-action@main
         with:
@@ -48,4 +48,4 @@ jobs:
           token: ${{ secrets.TOKEN_FOR_WIKI }}
           gitAuthorName: ${{ env.GIT_AUTHOR_NAME }}
           gitAuthorEmail: ${{ env.GIT_AUTHOR_EMAIL }}
-          branch: branch_for_wiki
+          branch: test_for_wiki
