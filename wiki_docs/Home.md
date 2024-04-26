@@ -51,7 +51,7 @@ The following is the outline of this document:
              token: ${{ secrets.TOKEN_FOR_WIKI }}
              gitAuthorName: ${{ env.GIT_AUTHOR_NAME }}
              gitAuthorEmail: ${{ env.GIT_AUTHOR_EMAIL }}
-  
+
      job-sync-wiki-to-docs:
        runs-on: ubuntu-latest
        if: github.event_name == 'gollum'
@@ -79,7 +79,7 @@ The following is the outline of this document:
 1. **Create a repository secret token**
    * Go to `Setting` of the repository > `Security` > `Secrets and variables` > `Actions` > `Repository secrets`
    * Please check the `repo` and the `workflow` options.
-   
+
    ![image](https://github.com/ChunYen-Chen/CheckNode/assets/70311975/1e7a7a4e-924f-442d-8f96-d48e4f1dc783)
 
    * Click `New repository secrets`, and then you will see the following. Please fill `TOKEN_FOR_WIKI` in the `Name` and your personal access token in `Secret`. 
@@ -94,7 +94,7 @@ The following is the outline of this document:
 ## At forked repository
 1. **Fork the repository**
    * Fork the original repository.
-   
+
    ![image](https://github.com/ChunYen-Chen/CheckNode/assets/70311975/ce645646-e9f8-484d-8579-ac7db4c88a8b)
 
 1. **Create first page**
@@ -112,7 +112,7 @@ The following is the outline of this document:
 
 1. **Create a repository secret token**
    * Go to `Setting` of the repository > `Security` > `Secrets and variables` > `Actions` > `Repository secrets`
-   
+
    ![image](https://github.com/ChunYen-Chen/CheckNode/assets/70311975/1e7a7a4e-924f-442d-8f96-d48e4f1dc783)
 
    * Click `New repository secrets`, and then you will see the following. Please fill `TOKEN_FOR_WIKI` in the `Name` and your personal access token in `Secret`. 
