@@ -51,7 +51,7 @@ The following is the outline of this document:
              token: ${{ secrets.TOKEN_FOR_WIKI }}
              gitAuthorName: ${{ env.GIT_AUTHOR_NAME }}
              gitAuthorEmail: ${{ env.GIT_AUTHOR_EMAIL }}
-  
+
      job-sync-wiki-to-docs:
        runs-on: ubuntu-latest
        if: github.event_name == 'gollum'
@@ -79,7 +79,7 @@ The following is the outline of this document:
 1. **Create a repository secret token**
    * Go to `Setting` of the repository > `Security` > `Secrets and variables` > `Actions` > `Repository secrets`
    * Please check the `repo` and the `workflow` options.
-   
+
    ![image](https://github.com/ChunYen-Chen/CheckNode/assets/70311975/1e7a7a4e-924f-442d-8f96-d48e4f1dc783)
 
    * Click `New repository secrets`, and then you will see the following. Please fill `TOKEN_FOR_WIKI` in the `Name` and your personal access token in `Secret`. 
@@ -94,7 +94,7 @@ The following is the outline of this document:
 ## At forked repository
 1. **Fork the repository**
    * Fork the original repository.
-   
+
    ![image](https://github.com/ChunYen-Chen/CheckNode/assets/70311975/ce645646-e9f8-484d-8579-ac7db4c88a8b)
 
 1. **Create first page**
@@ -112,7 +112,7 @@ The following is the outline of this document:
 
 1. **Create a repository secret token**
    * Go to `Setting` of the repository > `Security` > `Secrets and variables` > `Actions` > `Repository secrets`
-   
+
    ![image](https://github.com/ChunYen-Chen/CheckNode/assets/70311975/1e7a7a4e-924f-442d-8f96-d48e4f1dc783)
 
    * Click `New repository secrets`, and then you will see the following. Please fill `TOKEN_FOR_WIKI` in the `Name` and your personal access token in `Secret`. 
@@ -124,8 +124,8 @@ The following is the outline of this document:
    ![image](https://github.com/ChunYen-Chen/CheckNode/assets/70311975/9e58d4a8-3248-4ceb-81ff-276a6943149d)
 
 1. **Initialize wiki**
-   * If the `branch_for_wiki` is NOT forked, please add a new branch called `branch_for_wiki` and set the upstream properly. Once the `branch_for_wiki` is created, the wiki should also be updated.
-   * If the `branch_for_wiki` is forked, please run the workflow manually. Click `Action` > `Workflows` > `Documentation` > `Run workflow` > choose `Branch: branch_for_wiki` > `Run workflow`. Once the workflow is done, the wiki is also updated.
+   * If the `branch_for_wiki` is NOT forked, please add a new branch called `branch_for_wiki` and set the upstream/source properly. Once the `branch_for_wiki` is created, the wiki should also be updated.
+   * If the `branch_for_wiki` is forked, please run the workflow manually. Click `Action` > `Workflows` > `Documentation` > `Run workflow` > choose `Branch: branch_for_wiki` > Click green `Run workflow`. Once the workflow is done, the wiki is also updated.
    ![image](https://github.com/ChunYen-Chen/CheckNode/assets/70311975/189376a2-c11f-4801-acc3-2656db6b31ef)
 
 1. **Congratulations :tada:**
